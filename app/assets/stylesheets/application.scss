@@ -1,0 +1,17 @@
+// Place all the styles for the application layout here
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	position: fixed;
+	background-color: indianred;
+	height: 3rem;
+	width: 100%;
+}
+
+main {
+	margin-top: 3em;
+}
