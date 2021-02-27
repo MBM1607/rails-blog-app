@@ -12,7 +12,10 @@
 
 	<body>
 		<header>
-			<nav>
+			<nav id="navbar">
+				<%= link_to 'HOME', articles_path %>
+				<strong>&copy Muhammad Khan</strong>
+				<%= link_to "New Article", new_article_path %>
 			</nav>
 		</header>
 		<main>

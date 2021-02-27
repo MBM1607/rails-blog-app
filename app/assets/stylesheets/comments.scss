@@ -1,3 +1,38 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.comment-container {
+	width: 75%;
+	background-color: #fafafa;
+	border: 2px solid #27496d;
+	border-radius: 5px;
+	padding: 1em;
+	margin: 1em 0;
+}
+
+.comment {
+	padding: 2em;
+	border-radius: 5px;
+	border: 2px solid #27496d;
+}
+
+.commenter {
+	padding: 5px 10px;
+	height: max-content;
+	border-radius: 5px;
+	background-color: #27496d;
+	color: #fafafa;
+}
+
+.comment-button {
+	margin: 1em;
+	margin-bottom: 0.325em;
+	padding: 0.75em;
+	height: max-content;
+	background-color: #27496d;
+	color: #fafafa;
+	border: 2px solid #191a1d;
+	border-radius: 5px;
+	text-align: center;
+}

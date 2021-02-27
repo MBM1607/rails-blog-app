@@ -2,12 +2,72 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-body {
-	background-color: #333;
-	color: honeydew;
+
+.article-title {
 	text-align: center;
 }
 
-h1 {
-	font-size: 3rem;
+.article-buttons {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.article-button {
+	padding: 5px 10px;
+	height: max-content;
+	background-color: #27496d;
+	border: 2px solid #191a1d;
+	color: #fafafa;
+	border-radius: 5px;
+}
+
+.article-button:first-child {
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.article-button:last-child {
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.article-container {
+	border-radius: 10px;
+	box-shadow: #27496d 0 0 5px;
+	background-color: #bae8e8;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	width: 50%;
+	margin: 3rem 0;
+}
+
+.article-text {
+	padding: 2em;
+}
+
+em {
+	font-size: 1.625em;
+	margin: 1em 0;
+}
+
+.article-body {
+	margin: 2rem 0;
+	text-align: justify;
+}
+
+.article-list {
+	width: 75%;
+	text-align: center;
+	list-style: none;
+}
+
+.article-link {
+	padding: 1em;
+	margin: 0.5em;
+	background-color: #fafafa;
+	border: 2px solid #27496d;
+	border-radius: 5px;
 }
