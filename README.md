@@ -1,24 +1,8 @@
-# README
+# Introduction
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Small bloggin app with basic http authentication written in Ruby with Rails. This is a learning project made via the ODIN PROJECT.
 
-Things you may want to cover:
+## Version
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- ruby == 2.7.x
+- rails == 6.1.3
