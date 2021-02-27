@@ -31,7 +31,15 @@ nav a {
 	color: #272343;
 	background-color: #fafafa;
 	padding: 0.425em;
-	border-radius: 2px;
+	border: 2px solid #272343;
+	border-radius: 5px;
+	transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+	border-color: #fafafa;
+	background-color: #272343;
+	color: #fafafa;
 }
 
 
@@ -72,6 +80,8 @@ select, input[type="text"], textarea, input[type="submit"] {
 	border: 2px solid #142850;
 	padding: 1em;
 	outline: none;
+	cursor: pointer;
+	transition: background-color 0.2s, color 0.2s;
 }
 
 select:focus, input:focus, textarea:focus {
@@ -96,4 +106,10 @@ input[type="submit"] {
 	min-height: 3em;
 	background-color: #142850;
 	border: 2px solid #191a1d;
+	transition: color 0.2s, background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+	background-color: #fafafa;
+	color: #142850;
 }

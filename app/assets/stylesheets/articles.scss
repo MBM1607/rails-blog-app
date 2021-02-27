@@ -18,9 +18,15 @@
 	padding: 5px 10px;
 	height: max-content;
 	background-color: #27496d;
-	border: 2px solid #191a1d;
+	border: 2px solid #27496d;
 	color: #fafafa;
 	border-radius: 5px;
+	transition: background-color 0.2s, color 0.2s;
+}
+
+.article-button:hover {
+	background-color: #bae8e8;
+	color: #27496d;
 }
 
 .article-button:first-child {
@@ -70,4 +76,11 @@ em {
 	background-color: #fafafa;
 	border: 2px solid #27496d;
 	border-radius: 5px;
+	transition: color 0.2s, background-color 0.2s;
+	cursor: pointer;
+}
+
+.article-link:hover {
+	background-color: #27496d;
+	color: #fafafa;
 }
