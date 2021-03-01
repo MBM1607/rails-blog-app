@@ -3,9 +3,11 @@
 <ul class="article-list">
 	<% @articles.each do |article| %>
 		<% unless article.archived? %>
-			<li class="article-link">
-				<%= link_to article.title, article %>
-			</li>
+			<a href="<%=article_path(article)%>">
+				<li class="article-link">
+					<%=article.title%>
+				</li>
+			</a>
 		<% end %>
 	<% end %>
 </ul>
