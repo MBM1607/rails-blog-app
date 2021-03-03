@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-	http_basic_authenticate_with name: "admin", password: "admin", only: :destroy
+	before_action :authenticate_user!, only: :destroy
 
 	def create
 		@article = Article.find(params[:article_id])
@@ -11,12 +11,19 @@ class CommentsController < ApplicationController
 	def destroy
 		@article = Article.find(params[:article_id])
 		@comment = @article.comments.find(params[:id])
-		@comment.destroy
+		if current_user.id == @comment.user_id
+			@comment.destroy
+		else
+			flash[:alert] = "You are not authorized to delete this comment!"
+		end
 		redirect_to article_path(@article)
+
 	end
 
 	private
 		def comments_params
-			params.require(:comment).permit(:commenter, :body, :status)
+			val = params.require(:comment).permit(:body, :status)
+			val[:user_id] = current_user.id
+			val
 		end
 end

@@ -50,17 +50,21 @@ main {
 	align-items: center;
 }
 
-.notice {
-	background-color: #1aac0d;
+.notification {
 	color: #fefefe;
     width: 75%;
     font-size: 1.5em;
     text-align: center;
     padding: 0.325em;
     border-radius: 5px;
-	.alert {
-		background-color: #ff2e00;
-	}
+}
+
+.notice {
+	background-color: #1aac0d;
+}
+
+.alert {
+	background-color: #ff2e00;
 }
 
 h1, h2, h3 {
