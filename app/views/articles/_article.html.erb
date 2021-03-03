@@ -1,8 +1,14 @@
 <div class="article-container">
 	<div class="article-buttons">
-		<div class="article-button"><%= link_to 'Edit', edit_article_path(article) %></div>
-		<div class="article-button"><%= link_to article.user.name, edit_article_path(article) %></div>
-		<div class="article-button"><%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: "Are you sure?" }%></div>
+		<% if user_signed_in? %>
+			<% if current_user == article.user %>
+				<div class="article-button"><%= link_to 'Edit', edit_article_path(article) %></div>
+			<% end %>
+			<div class="article-button"><%= link_to article.user.name, edit_article_path(article) %></div>
+			<% if current_user == article.user %>
+				<div class="article-button"><%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: "Are you sure?" }%></div>
+			<% end %>
+		<% end %>
 	</div>
 	<div class="article-text">
 		<h1 class="article-title"><%= article.title %></h1>
