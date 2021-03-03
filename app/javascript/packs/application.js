@@ -11,3 +11,11 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelectorAll(".notification").forEach((notification) => {
+		setTimeout(() => {
+			notification.remove();
+		}, 3600);
+	});
+});
