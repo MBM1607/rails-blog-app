@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Blog</title>
+		<%= favicon_link_tag %>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<%= csrf_meta_tags %>
 		<%= csp_meta_tag %>
@@ -14,6 +15,11 @@
 		<header>
 			<nav id="navbar">
 				<%= link_to 'HOME', articles_path %>
+				<div>
+					<% if user_signed_in? %>
+						<p>&copy<%= current_user.name %></p>
+					<% end %>
+				</div>
 				<div class="nav-links">
 					<% if user_signed_in? %>
 						<%= link_to "New Article", new_article_path %>

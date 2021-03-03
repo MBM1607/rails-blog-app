@@ -1,0 +1,13 @@
+
+<h2>Users</h2>
+<em>There are <%= @users.count %> users and counting!</em>
+<ul class="users-list">
+	<% @users.each do |user| %>
+
+		<div class="user-container">
+			<p><strong>Name: </strong><em class="user-name">&copy<%= user.name %></em></p>
+			<p><strong>Email: </strong><em class="user-email"><%= user.email %></em></p>
+		</div>
+
+	<% end %>
+</ul>

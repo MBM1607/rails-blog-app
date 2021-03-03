@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 									registrations: 'users/registrations',
 									shared: 'users/shared'}
 	root "articles#index"
+	get "users", to: "users#show"
 
 	resources :articles do
 		resources :comments
