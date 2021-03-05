@@ -13,9 +13,37 @@ Turbolinks.start()
 ActiveStorage.start()
 
 document.addEventListener('DOMContentLoaded', () => {
-	document.querySelectorAll(".notification").forEach((notification) => {
+	document.querySelectorAll('.notification').forEach((notification) => {
 		setTimeout(() => {
 			notification.remove();
 		}, 3600);
 	});
+});
+
+window.addEventListener('turbolinks:load', () => {
+	console.log("LOADED")
+	// ? Validation for form
+
+	const password_input = document.getElementById('user_password')
+	const password_confirmation = document.getElementById('user_password_confirmation')
+
+	if (password_input) {
+		password_input.addEventListener('change', () => {
+			if (password_input.value.length < 6) {
+				password_input.setCustomValidity('Password must be at least 6 characters.');
+			} else {
+				password_input.setCustomValidity('')
+			}
+		});
+
+		if (password_confirmation) {
+			password_confirmation.addEventListener('change', () => {
+				if (password_input.value == password_confirmation.value) {
+					password_confirmation.setCustomValidity('')
+				} else {
+					password_confirmation.setCustomValidity('Passwords must match.')
+				}
+			});
+		}
+	}
 });
