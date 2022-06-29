@@ -4,5 +4,7 @@
 <em>This Article has <%= @article.comments.count %> comments and counting!</em>
 <%= render @article.comments %>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form', article: @article %>
+<% if user_signed_in? %>
+  <h2>Add a comment:</h2>
+  <%= render 'comments/form', article: @article %>
+<% end %>

@@ -1,7 +1,10 @@
-class UsersController < ApplicationController
-	before_action :authenticate_user!
+# frozen_string_literal: true
 
-	def show
-		@users = User.all
-	end
+# Controller to handle user actions
+class UsersController < ApplicationController
+  before_action :authenticate_user!
+
+  def show
+    @users = User.all
+  end
 end
